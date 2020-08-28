@@ -1,0 +1,12 @@
+version: '3'
+services:
+  tf:
+    build: 
+        context: ./
+        dockerfile: Dockerfile
+    container_name: terraform
+    volumes:
+      - ./:/root/work
+      - $HOME/.aws:/root/.aws
+    working_dir: /root/work
+    
